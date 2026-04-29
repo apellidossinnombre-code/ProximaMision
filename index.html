@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Próxima Misión</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="./assets/index-D_LQix8I.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BZNqnNv7.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Próxima Misión</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+  <!-- BACKGROUND LAYER -->
+  <div class="bg"></div>
+  <div class="overlay"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo">🚀 PRÓXIMA MISIÓN</div>
+
+    <nav>
+      <a class="active">INICIO</a>
+      <a>LANZAMIENTOS</a>
+      <a>COHETES</a>
+      <a>AGENCIAS</a>
+      <a>NOTICIAS</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+
+    <div class="badge">
+      <span class="dot"></span>
+      PRÓXIMO LANZAMIENTO
+      <span class="agency">ARIANESPACE</span>
+    </div>
+
+    <h1>
+      Ariane 64 | Amazon<br/>
+      Leo (LE-02)
+    </h1>
+
+    <p class="sub">
+      30 de abril de 2026 · 10:08 UTC
+    </p>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown">
+      <div class="cell"><div id="d">00</div><span>DÍAS</span></div>
+      <div class="cell"><div id="h">00</div><span>HRS</span></div>
+      <div class="cell"><div id="m">00</div><span>MIN</span></div>
+      <div class="cell"><div id="s">00</div><span>SEG</span></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <button class="primary">VER DETALLES →</button>
+      <button class="secondary">AGENDA EUROPEA</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
