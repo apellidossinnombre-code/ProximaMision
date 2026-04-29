@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spaceflight Clone</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">🚀 Spaceflight</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Misiones</a>
+      <a href="#">Noticias</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Exploración Espacial</h1>
+      <p>Descubre misiones, datos y lanzamientos en tiempo real</p>
+      <button onclick="loadData()">Ver misiones</button>
+    </section>
+
+    <section id="content" class="grid"></section>
+
+  </main>
+
+</body>
+<script src="script.js"></script>
+</html>
