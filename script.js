@@ -1,37 +1,19 @@
-const mockData = [
-  {
-    name: "Falcon 9",
-    agency: "SpaceX",
-    status: "Activo"
-  },
-  {
-    name: "Artemis I",
-    agency: "NASA",
-    status: "Completado"
-  },
-  {
-    name: "Starship",
-    agency: "SpaceX",
-    status: "En pruebas"
-  }
-];
+const targetDate = new Date("2026-04-30T10:08:00Z").getTime();
 
-function loadData() {
-  const container = document.getElementById("content");
-  container.innerHTML = "";
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = targetDate - now;
 
-  mockData.forEach(item => {
-    const card = document.createElement("div");
-    card.style.background = "#111827";
-    card.style.padding = "15px";
-    card.style.borderRadius = "10px";
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const min = Math.floor((diff / (1000 * 60)) % 60);
+  const sec = Math.floor((diff / 1000) % 60);
 
-    card.innerHTML = `
-      <h3>${item.name}</h3>
-      <p>Agencia: ${item.agency}</p>
-      <p>Estado: ${item.status}</p>
-    `;
-
-    container.appendChild(card);
-  });
+  document.getElementById("days").innerText = String(days).padStart(2, "0");
+  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+  document.getElementById("min").innerText = String(min).padStart(2, "0");
+  document.getElementById("sec").innerText = String(sec).padStart(2, "0");
 }
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
